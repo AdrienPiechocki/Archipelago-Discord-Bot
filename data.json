@@ -1,0 +1,744 @@
+{
+  "guilds": {
+    "1222892171045371985": {
+      "host": "archipelago.gg:65305",
+      "password": null,
+      "channel": 1573641010137796628,
+      "links": {
+        "301770950800834560": {
+          "active": "Azimiro",
+          "slots": [
+            {
+              "slot": "Azimiro",
+              "password": null
+            }
+          ]
+        },
+        "449917994206887957": {
+          "active": "Yugi",
+          "slots": [
+            {
+              "slot": "Yugi",
+              "password": null
+            }
+          ]
+        }
+      },
+      "threads": {
+        "Azimiro": 1573659532905680936
+      },
+      "forum": 1573659197629927474,
+      "hint_messages": {
+        "Azimiro\u001fAzimiro\u001fA Leaflet\u001fThe Missing Brother": [
+          1573651999835164713,
+          1573651999835164713
+        ],
+        "Yugi\u001fAzimiro\u001fCampaign Tier 1 Column 3\u001fMurder in Merduibh - Sky Q Re BM 1 C Journal": [
+          [
+            1573650624971804772,
+            1573653974517817368
+          ],
+          [
+            1573651999835164713,
+            1573653976543535166
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fSticky Situation": [
+          [
+            1573641010137796628,
+            1573659408255164487
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fCleansing of the Temple": [
+          [
+            1573641010137796628,
+            1573659412780945509
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fExodia Finish Bonus": [
+          [
+            1573641010137796628,
+            1573659413028540617
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fBook Club - Anv M": [
+          [
+            1573641010137796628,
+            1573659413808549960
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fA Will to Go On": [
+          [
+            1573641010137796628,
+            1573659414911647837
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fObtain Hamon, Lord of Striking Thunder": [
+          [
+            1573641010137796628,
+            1573659414500614185
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fSnake": [
+          [
+            1573641010137796628,
+            1573659431131025531
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fObtain Destiny Board and its letters": [
+          [
+            1573641010137796628,
+            1573659431957176322
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fRitual Summon Bonus": [
+          [
+            1573641010137796628,
+            1573659433366593647
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fEscort to Tel Ouada": [
+          [
+            1573641010137796628,
+            1573659432246583437
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fGoldenrod House - Anv": [
+          [
+            1573641010137796628,
+            1573659447652392991
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fCampaign Tier 2: 3 Wins B": [
+          [
+            1573641010137796628,
+            1573659447945994282
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fCampaign Tier 2: 5 Wins B": [
+          [
+            1573641010137796628,
+            1573659449170857995
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fCampaign Tier 1: 5 Wins A": [
+          [
+            1573641010137796628,
+            1573659450621821055
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fTrade Mission to the Zainab - Tel Vos": [
+          [
+            1573641010137796628,
+            1573659449258811473
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fRemnants of Resdayn - Om": [
+          [
+            1573641010137796628,
+            1573659469009911891
+          ]
+        ],
+        "Azimiro\u001fYugi\u001fGold (100)\u001fCampaign Tier 3: 5 Wins B": [
+          [
+            1573641010137796628,
+            1573659468691144812
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fTrouble Brewing in Bal Foyen - And Alchemists 5": [
+          [
+            1573641010137796628,
+            1573659470662471815
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Pauper and the Prince": [
+          [
+            1573641010137796628,
+            1573659472386326649
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fBook Club - Anv": [
+          [
+            1573641010137796628,
+            1573659474009391176
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Reachman Amulet @ Seeking a Supplier": [
+          [
+            1573641010137796628,
+            1573659494171414659
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fTakhur The Terrible": [
+          [
+            1573641010137796628,
+            1573659506364252222
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fGummidge - complete": [
+          [
+            1573641010137796628,
+            1573659507832266844
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fPoisoning the Well": [
+          [
+            1573641010137796628,
+            1573659508960657539
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Amulet of Soft Paws @ The Prince of Rats": [
+          [
+            1573641010137796628,
+            1573659510050922547
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Arena Gold Scale @ Narsis Arena: The Golden Scale": [
+          [
+            1573641010137796628,
+            1573659510952829022
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fHarrumat Brimstone": [
+          [
+            1573641010137796628,
+            1573659512655843428
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fHannat Zainsubani": [
+          [
+            1573659532905680936,
+            1573659532905680936
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fMahhjat's Mistake": [
+          [
+            1573659532905680936,
+            1573659542544449557
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Lightspeed Sabatons @ The Speed of Lightning": [
+          [
+            1573659532905680936,
+            1573659543802745023
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fGoldenrod House - Anv DR": [
+          [
+            1573659532905680936,
+            1573659545316757646
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Nan Iban Guard's Getaway": [
+          [
+            1573659532905680936,
+            1573659546864320575
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fFeed Sal": [
+          [
+            1573659532905680936,
+            1573659548307427490
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fDreams of a White Guar": [
+          [
+            1573659532905680936,
+            1573659549456535704
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fPackrat": [
+          [
+            1573659532905680936,
+            1573659568641286219
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Short Unhappy Life of Danar Uvelas": [
+          [
+            1573659532905680936,
+            1573659570126192651
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fBounty: Cacitus Suspilus": [
+          [
+            1573659532905680936,
+            1573659571233235038
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fIllicit Inspiration": [
+          [
+            1573659532905680936,
+            1573659573271920702
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fBounty: Holst the Hound": [
+          [
+            1573659532905680936,
+            1573659574681210911
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReaching For Answers": [
+          [
+            1573659532905680936,
+            1573659578116218973
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Drunken Knight": [
+          [
+            1573659532905680936,
+            1573659579513049149
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fA Woman Named Petri - Wom Letter": [
+          [
+            1573659532905680936,
+            1573659599230476352
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fShock Therapy": [
+          [
+            1573659532905680936,
+            1573659600413003837
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fLiterary Critic": [
+          [
+            1573659532905680936,
+            1573659601747054664
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Naked 'Nard - Anv Nard Gloves": [
+          [
+            1573659532905680936,
+            1573659603009409090
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fMurder on the Crossroads - Murd Cross Ramus": [
+          [
+            1573659532905680936,
+            1573659604313837669
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fAgrippina Herennia's Tropical Vacation - Vva Trop Vac": [
+          [
+            1573659532905680936,
+            1573659605819465791
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fIlvaalmu Unbound": [
+          [
+            1573659532905680936,
+            1573659626577334282
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Trickster Knight": [
+          [
+            1573659532905680936,
+            1573659631450857514
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fTribunal Thrill-Seeking": [
+          [
+            1573659532905680936,
+            1573659633133035581
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fNahassar's Love Letter": [
+          [
+            1573659532905680936,
+            1573659634802106422
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fDaughter of a Marksman": [
+          [
+            1573659532905680936,
+            1573659636307992577
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Note from Atreno Drenim @ The Many Scamps of Mannu": [
+          [
+            1573659532905680936,
+            1573659637855817839
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fHead in the Game": [
+          [
+            1573659532905680936,
+            1573659639428423751
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fGuide to Hlan Oek": [
+          [
+            1573659532905680936,
+            1573659642960289883
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fCol Stalker": [
+          [
+            1573659532905680936,
+            1573659664032211075
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Amulet of Duty @ With The Army You Have": [
+          [
+            1573659532905680936,
+            1573659665190101085
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Fate of Dralnas Virian": [
+          [
+            1573659532905680936,
+            1573659666884595814
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fRevealing the History of Fort Ancylis": [
+          [
+            1573659532905680936,
+            1573659668524310640
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fNarsis Arena: Telvanni Takedown": [
+          [
+            1573659532905680936,
+            1573659669585465381
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Dwemer's Bone": [
+          [
+            1573659532905680936,
+            1573659671456387133
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fHvaldur Is Alive!": [
+          [
+            1573659532905680936,
+            1573659690393407489
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fA Coldharbour Keelhaul": [
+          [
+            1573659532905680936,
+            1573659691941371965
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fLlanehra Androthi the Velk Poacher": [
+          [
+            1573659532905680936,
+            1573659693425893409
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Pelladia Legacy": [
+          [
+            1573659532905680936,
+            1573659694860599298
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fDead in the Water": [
+          [
+            1573659532905680936,
+            1573659696215101575
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Bad Actor": [
+          [
+            1573659532905680936,
+            1573659697720983684
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fLead the Pilgrim to Koal Cave": [
+          [
+            1573659532905680936,
+            1573659716587102260
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Sheogorath's Favor @ A Bard's Tale": [
+          [
+            1573659532905680936,
+            1573659718541516954
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fAland Remyon's Treasure": [
+          [
+            1573659532905680936,
+            1573659720105984001
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fJust A Sip": [
+          [
+            1573659532905680936,
+            1573659721569804319
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fUnwelcome in Karthwasten": [
+          [
+            1573659532905680936,
+            1573659723050393641
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fOld Soldiers": [
+          [
+            1573659532905680936,
+            1573659724828647545
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fKill or Be Killed": [
+          [
+            1573659532905680936,
+            1573659743770247220
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fTo Win a Heart": [
+          [
+            1573659532905680936,
+            1573659745066164235
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fAwfully-Swift-Skink Breaks Free - Wil Oran Escaped": [
+          [
+            1573659532905680936,
+            1573659746127454309
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fLetter for Edalvel Plantation": [
+          [
+            1573659532905680936,
+            1573659747305914389
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fCracking Icebreaker": [
+          [
+            1573659532905680936,
+            1573659748652552285
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fAnv Goldenrod Hire Lioprand": [
+          [
+            1573659532905680936,
+            1573659750007181403
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fForces of Nature": [
+          [
+            1573659532905680936,
+            1573659770060152906
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fRomance in Ranyon-ruhn": [
+          [
+            1573659532905680936,
+            1573659771293278230
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Enslaver's Ring @ A Clean Sweep": [
+          [
+            1573659532905680936,
+            1573659772895363219
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fSearch for a Perfect Sword": [
+          [
+            1573659532905680936,
+            1573659774178955338
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Creature's Cowl @ Making a Name": [
+          [
+            1573659532905680936,
+            1573659775965859871
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Great River": [
+          [
+            1573659532905680936,
+            1573659777417084960
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Ethala Faranis' Scroll @ Narsis Arena: Telvanni Takedown": [
+          [
+            1573659532905680936,
+            1573659796585058487
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fGetting Out of Aimrah": [
+          [
+            1573659532905680936,
+            1573659797885292619
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fA Rope Salesman": [
+          [
+            1573659532905680936,
+            1573659799701291059
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Scamp and the Hat": [
+          [
+            1573659532905680936,
+            1573659801123164222
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fWork for an Orc - Anv": [
+          [
+            1573659532905680936,
+            1573659803425706096
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fA Troupe in Trouble": [
+          [
+            1573659532905680936,
+            1573659805434912850
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Silver Longsword of Protection @ Stendarr Tower Haunting": [
+          [
+            1573659532905680936,
+            1573659807733522563
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fNs Arena Gen Fight": [
+          [
+            1573659532905680936,
+            1573659827618578473
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThrash the Thresher": [
+          [
+            1573659532905680936,
+            1573659829149507597
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fWarlord Wartgog": [
+          [
+            1573659532905680936,
+            1573659830995128402
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Amulet of Unseen Flight @ Robbing the Ancestors": [
+          [
+            1573659532905680936,
+            1573659834287521793
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fStranded": [
+          [
+            1573659532905680936,
+            1573659835977957377
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fReward: Glass Staff of Cairn-Maw @ Lunar Intoxication": [
+          [
+            1573659532905680936,
+            1573659837227602021
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Jealous Shopkeeper": [
+          [
+            1573659532905680936,
+            1573659838377103474
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fUnrest at Tahvel": [
+          [
+            1573659532905680936,
+            1573659857922297969
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fPapers, please!": [
+          [
+            1573659532905680936,
+            1573659859201564803
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Bal Foyen Regained - Shei 6 C": [
+          [
+            1573659532905680936,
+            1573659861042987019
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: A Message from Mister Delagia": [
+          [
+            1573659532905680936,
+            1573659866252316674
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fKill Hard-Heart (Thieves Guild)": [
+          [
+            1573659532905680936,
+            1573659872111632426
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Deal with Disela": [
+          [
+            1573659532905680936,
+            1573659873575571558
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fHrundi's Lover": [
+          [
+            1573659532905680936,
+            1573659874917617807
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Flying Too Close - Ns TG 6 B": [
+          [
+            1573659532905680936,
+            1573659876188496004
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fA": [
+          [
+            1573659532905680936,
+            1573659877451104260
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Happy Birthday, Ruma Soanix - Fentus 3 B": [
+          [
+            1573659532905680936,
+            1573659897126584393
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Thieving Rivalry": [
+          [
+            1573659532905680936,
+            1573659898430885949
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Thoricles' Bane - Three Eyes 1": [
+          [
+            1573659532905680936,
+            1573659899999551609
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThieves Guild: Take the House": [
+          [
+            1573659532905680936,
+            1573659901274628198
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fYngling's Ledger": [
+          [
+            1573659532905680936,
+            1573659904605028474
+          ]
+        ],
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fThe Black Isle Bubble": [
+          [
+            1573659532905680936,
+            1573659905884299346
+          ]
+        ]
+      },
+      "hint_found": [
+        "Yugi\u001fAzimiro\u001fCampaign Tier 1 Column 5\u001fReward: Certificate of Credulity @ Certificate of Credibility",
+        "Yugi\u001fAzimiro\u001fCampaign Tier 1 Column 3\u001fMurder in Merduibh - Sky Q Re BM 1 C Journal",
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fTrouble Brewing in Bal Foyen - And Alchemists 3",
+        "Azimiro\u001fAzimiro\u001fGold (100)\u001fFargoth's Hiding Place",
+        "Azimiro\u001fYugi\u001fGold (100)\u001fTrap Card Bonus",
+        "Azimiro\u001fYugi\u001fGold (100)\u001fDuelist Bonus Level 4"
+      ],
+      "room_url": "https://archipelago.gg/room/Ujf-WbHJQCaJzDEauFurWQ",
+      "log_channel": 1573661249001230457,
+      "log_items": "all"
+    }
+  }
+}
