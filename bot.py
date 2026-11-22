@@ -418,6 +418,25 @@ async def apforum(interaction: discord.Interaction, forum: discord.ForumChannel 
     await interaction.response.send_message(msg, ephemeral=True)
 
 
+@bot.tree.command(name="reset", description="Efface toute la config et tous les liens de ce serveur (irréversible)")
+@app_commands.describe(confirm="Mets « oui » pour confirmer")
+@app_commands.guild_only()
+@archipelago_admin()
+async def reset(interaction: discord.Interaction, confirm: str = ""):
+    if confirm.strip().lower() not in ("oui", "yes"):
+        return await interaction.response.send_message(
+            "⚠️ Cela efface la config du serveur, tous les liens et le suivi des hints. "
+            "Relance `/reset confirm:oui` pour confirmer.", ephemeral=True)
+    gid = interaction.guild_id
+    for g, slot in [k for k in bot.ap.conns if k[0] == gid]:
+        await bot.ap.drop(g, slot)
+    store.reset_guild(gid)
+    bot.seen_hints = {k for k in bot.seen_hints if k[0] != gid and not (k[0] == "found" and k[1] == gid)}
+    bot.log_queues.pop(gid, None)
+    await interaction.response.send_message(
+        "🗑️ Données du serveur effacées. Refais `/apserver` pour recommencer.", ephemeral=True)
+
+
 # --- gestion des slots ----------------------------------------------------------------------
 
 async def slot_autocomplete(interaction: discord.Interaction, current: str):

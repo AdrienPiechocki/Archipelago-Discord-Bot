@@ -1,91 +1,92 @@
 # Archipelago Discord Bot
 
-Bot Discord pour utiliser la console d'une room [Archipelago](https://archipelago.gg) sans quitter Discord : `/hint` avec autocomplétion, hints classés par joueur dans un forum (et barrés une fois validés), pings des joueurs concernés, logs du serveur, relance de la room.
+Discord bot to use the console of an [Archipelago](https://archipelago.gg) room without leaving Discord: `/hint` with autocomplete, hints sorted by player in a forum (and struck through once found), pings for the players involved, server logs, and room restart.
 
-## Fonctionnement
+## How it works
 
-Le bot se connecte au serveur Archipelago comme un client `TextOnly`, **une connexion par slot lié** à un joueur Discord (le serveur attribue `!hint` au slot connecté, d'où une connexion par joueur). Il lit les messages du serveur, l'inventaire du slot et la liste de ses hints. Il ne coche jamais de location.
+The bot connects to the Archipelago server as a `TextOnly` client, **one connection per slot linked** to a Discord player (the server assigns `!hint` to the connected slot, hence one connection per player). It reads the server messages, the slot's inventory and its list of hints. It never checks a location.
 
 ## Installation
 
 ```sh
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
-cp .env.example .env   # puis remplir (voir ci-dessous)
+cp .env.example .env   # then fill it in (see below)
 .venv/bin/python bot.py
 ```
 
-### Créer le bot Discord
+### Creating the Discord bot
 
-1. https://discord.com/developers/applications → **New Application** (l'adresse e-mail du compte doit être vérifiée).
-2. Onglet **Bot** : **Reset Token** (c'est le `DISCORD_TOKEN`) et activer **Message Content Intent** (nécessaire pour les `!hint`).
-3. **OAuth2 → URL Generator** : scopes `bot` + `applications.commands`, puis ouvrir l'URL pour inviter le bot.
-4. Permissions utiles : voir le salon, envoyer des messages, lire l'historique ; dans le forum des hints : créer des posts, envoyer des messages dans les posts et gérer les posts (pour rouvrir un post archivé).
+1. https://discord.com/developers/applications → **New Application** (the account's email address must be verified).
+2. **Bot** tab: **Reset Token** (this is the `DISCORD_TOKEN`) and enable **Message Content Intent** (required for `!hint`).
+3. **OAuth2 → URL Generator**: scopes `bot` + `applications.commands`, then open the URL to invite the bot.
+4. Useful permissions: view channel, send messages, read message history; in the hints forum: create posts, send messages in posts, and manage posts (to reopen an archived post).
 
 ### Configuration (`.env`)
 
-| Variable | Rôle |
+| Variable | Purpose |
 |---|---|
-| `DISCORD_TOKEN` | Obligatoire. Token du bot. |
-| `GUILD_ID` | Optionnel. ID de ton serveur Discord (mode développeur → clic droit sur le serveur → copier l'identifiant) : les commandes slash apparaissent instantanément au lieu de jusqu'à 1 h. À laisser vide si le bot sert plusieurs serveurs. |
-| `ADMIN_ROLE` | Optionnel. Nom du rôle autorisé à utiliser les commandes admin (défaut : `ArchipelagoAdmin`). Le rôle doit exister sur le serveur. |
-| `DATA_FILE` | Optionnel. Fichier de stockage (défaut : `data.json`). |
+| `DISCORD_TOKEN` | Required. The bot token. |
+| `GUILD_ID` | Optional. Your Discord server ID (developer mode → right-click the server → copy ID): slash commands appear instantly instead of taking up to 1 h. Leave empty if the bot serves several servers. |
+| `ADMIN_ROLE` | Optional. Name of the role allowed to use admin commands (default: `ArchipelagoAdmin`). The role must exist on the server. |
+| `DATA_FILE` | Optional. Storage file (default: `data.json`). |
 
-## Mise en place sur un serveur Discord (admins)
+## Setting up on a Discord server (admins)
 
-Réservé au rôle `@ArchipelagoAdmin`.
+Restricted to the `@ArchipelagoAdmin` role.
 
-| Commande | Effet |
+| Command | Effect |
 |---|---|
-| `/apserver host:… [password] [channel]` | Adresse du serveur (ex : `archipelago.gg:38281`), mot de passe de la room éventuel et salon où le bot poste ses messages. **Première commande à lancer.** |
-| `/apforum [forum]` | Poste les hints dans un forum, un post par slot. Sans argument : désactive. |
-| `/aplogs [channel] [items]` | Relaie les messages du serveur dans un salon. `items` : importants seulement (défaut), tous, ou aucun. Sans salon : désactive. |
-| `/aproom [url]` | Relance la room si elle s'arrête (voir plus bas). Sans argument : désactive. |
-| `/ap !admin …` | Commandes d'administration du serveur Archipelago (réponse privée). |
+| `/apserver host:… [password] [channel]` | Server address (e.g. `archipelago.gg:38281`), optional room password, and the channel where the bot posts its messages. **First command to run.** |
+| `/apforum [forum]` | Posts hints in a forum, one post per slot. With no argument: disables it. |
+| `/aplogs [channel] [items]` | Relays server messages to a channel. `items`: important only (default), all, or none. With no channel: disables it. |
+| `/aproom [url]` | Restarts the room if it stops (see below). With no argument: disables it. |
+| `/reset [confirm]` | Wipes this server's config, all links and hint tracking (disconnects every slot). Requires `confirm:yes`. Irreversible. |
+| `/ap !admin …` | Archipelago server administration commands (private reply). |
 
-## Commandes des joueurs
+## Player commands
 
-**Lier ses slots.** Chaque joueur fait `/link slot:<nom exact du slot>` ; un joueur peut en lier **plusieurs**. Le dernier slot lié devient le *slot actif*, utilisé par défaut.
+**Linking your slots.** Each player runs `/link slot:<exact slot name>`; a player can link **several** slots. The last linked slot becomes the *active slot*, used by default.
 
-| Commande | Effet |
+| Command | Effect |
 |---|---|
-| `/link slot [password]` | Lie un slot (vérifie qu'il est joignable). |
-| `/unlink [slot]` | Retire un slot (par défaut l'actif). |
-| `/slot [slot]` | Sans argument : liste tes slots (⭐ = actif). Avec : change de slot actif. |
-| `/hint [item] [slot]` | Demande un hint. Sans item : affiche les points de hint. |
-| `/hint_location location [slot]` | Hint sur une location de ton monde. |
-| `/items [filter] [filter_regex] [slot]` | Liste les items du jeu en colonnes. `filter` : texte contenu ; `filter_regex` : expression régulière (insensible à la casse, ex : `^Progressive\|Key$`). |
-| `/ap commande [slot]` | N'importe quelle commande de la console (`players`, `status`, `release`, `collect`, `remaining`, `missing`, `help`…). |
+| `/link slot [password]` | Links a slot (checks that it can be reached). |
+| `/unlink [slot]` | Removes a slot (the active one by default). |
+| `/slot [slot]` | With no argument: lists your slots (⭐ = active). With one: switches the active slot. |
+| `/hint [item] [slot]` | Requests a hint. With no item: shows your hint points. |
+| `/hint_location location [slot]` | Hint for a location in your world. |
+| `/items [filter] [filter_regex] [slot]` | Lists the game's items in columns. `filter`: contained text; `filter_regex`: regular expression (case-insensitive, e.g. `^Progressive\|Key$`). |
+| `/ap command [slot]` | Any console command (`players`, `status`, `release`, `collect`, `remaining`, `missing`, `help`…). |
 
-Les commandes `!xxx` tapées dans le salon configuré sont aussi transmises à la console avec ton slot actif (`!hint Sword`, `!players`, `!release`…). Les commandes `!admin` (qui contiennent un mot de passe) ne passent que par `/ap`.
+`!xxx` commands typed in the configured channel are also forwarded to the console with your active slot (`!hint Sword`, `!players`, `!release`…). `!admin` commands (which contain a password) only go through `/ap`.
 
-**Pastilles** dans l'autocomplétion et `/items` : ✅ item déjà reçu · 🔃 déjà hinté (aussi pour les locations de `/hint_location`). Discord limite l'autocomplétion à 25 propositions : les plus pertinentes passent en premier (début du nom, puis tous les mots saisis dans n'importe quel ordre ; les items ni reçus ni hintés avant les autres) et une dernière ligne indique combien sont cachés. `/items` les affiche tous.
+**Badges** in autocomplete and `/items`: ✅ item already received · 🔃 already hinted (also for locations in `/hint_location`). Discord limits autocomplete to 25 suggestions: the most relevant come first (start of the name, then all typed words in any order; items neither received nor hinted before the others) and a last line indicates how many are hidden. `/items` shows them all.
 
 ## Hints
 
-Quand un hint est créé, le bot le poste avec un ping du joueur qui reçoit l'item et de celui qui le possède :
+When a hint is created, the bot posts it with a ping for the player who receives the item and the one who owns it:
 
 ```
-💡 @slot1 a besoin de Sword chez @slot2 dans Chest
+💡 @slot1 needs Sword at @slot2 in Chest
 ```
 
-- **Forum** (`/apforum`) : un post par slot, le hint est ajouté dans le post des **deux** joueurs concernés (un seul ping). Sinon, il est posté dans le salon configuré.
-- **Hint validé** (la location est cochée) : le message est barré et marqué ✅. Les hints validés pendant que le bot était arrêté sont barrés au redémarrage.
-- La réponse à `/hint` reprend le message du hint avec un lien vers le message précis du forum, ou « ✅ Objet déjà trouvé » si la location est déjà cochée.
-- Un hint déjà posté n'est jamais reposté (par exemple « Hint was previously used, no points deducted. »).
+- **Forum** (`/apforum`): one post per slot; the hint is added to the posts of **both** players involved (a single ping). Otherwise, it is posted in the configured channel.
+- **Found hint** (the location is checked): the message is struck through and marked ✅. Hints found while the bot was stopped are struck through at restart.
+- The reply to `/hint` repeats the hint message with a link to the exact forum message, or "✅ Item already found" if the location is already checked.
+- A hint that has already been posted is never reposted (for example "Hint was previously used, no points deducted.").
 
-## Logs du serveur
+## Server logs
 
-`/aplogs` relaie : envois d'items (📦), connexions (🟢) et déconnexions (🔴), objectifs (🏆), chat (💬), release / collect / countdown. Les hints ne sont pas relayés (ils ont leur forum), ni les connexions des clients texte comme ce bot. Aucun ping : les mentions sont désactivées. Les lignes sont regroupées par paquets toutes les 3 s pour respecter les limites de Discord ; en cas de grosse rafale, les plus anciennes peuvent être omises.
+`/aplogs` relays: item sends (📦), connections (🟢) and disconnections (🔴), goals (🏆), chat (💬), release / collect / countdown. Hints are not relayed (they have their forum), nor are connections from text clients such as this bot. No pings: mentions are disabled. Lines are batched every 3 s to respect Discord's limits; during a large burst, the oldest may be dropped.
 
-## Garder la room en vie (archipelago.gg)
+## Keeping the room alive (archipelago.gg)
 
-archipelago.gg arrête une room après 2 h sans **nouvelle location cochée**. Rester connecté ne compte pas comme une activité. Avec `/aproom url:https://archipelago.gg/room/<id>`, si tous les slots liés sont déconnectés, le bot prévient dans le salon et visite la page de la room, ce qui la relance (sauvegarde conservée). Ses connexions se rétablissent seules.
+archipelago.gg shuts a room down after 2 h without a **new location checked**. Staying connected does not count as activity. With `/aproom url:https://archipelago.gg/room/<id>`, if all linked slots are disconnected, the bot notifies in the channel and visits the room page, which restarts it (save preserved). Its connections re-establish themselves.
 
-Limites : le port peut changer après une relance (refaire `/apserver` si besoin) ; sans slot lié, le bot ne peut pas détecter l'arrêt et visite la page toutes les 10 min. Ce timeout sert à économiser les ressources d'un site partagé : à toi de juger si c'est acceptable pour ta partie, sinon héberge la room toi-même.
+Limitations: the port may change after a restart (rerun `/apserver` if needed); with no linked slot, the bot cannot detect the shutdown and visits the page every 10 min. This timeout exists to save resources on a shared site: it's up to you to judge whether that's acceptable for your game, otherwise host the room yourself.
 
 ## Notes
 
-- Seuls les joueurs ayant fait `/link` sont mentionnés et détectés ; les autres apparaissent par leur nom de slot. Un hint dont ni le receveur ni le possesseur n'est lié n'est pas vu.
-- Les hints postés avant l'ajout du suivi des messages ne peuvent pas être barrés automatiquement.
-- `data.json` contient les mots de passe en clair (permissions 600) : ne pas le committer.
-- Dépendances : `discord.py`, `websockets`, `python-dotenv`, `regex` (timeout contre les regex trop lentes).
+- Only players who ran `/link` are mentioned and detected; others appear by their slot name. A hint where neither the receiver nor the owner is linked is not seen.
+- Hints posted before message tracking was added cannot be struck through automatically.
+- `data.json` contains passwords in plain text (permissions 600): do not commit it.
+- Dependencies: `discord.py`, `websockets`, `python-dotenv`, `regex` (timeout against slow regexes).

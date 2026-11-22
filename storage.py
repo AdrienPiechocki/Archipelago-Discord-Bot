@@ -35,6 +35,11 @@ class Store:
         return self.data["guilds"].setdefault(
             str(gid), {"host": None, "password": None, "channel": None, "links": {}})
 
+    def reset_guild(self, gid: int):
+        """Efface toute la config et tous les liens de la guilde."""
+        self.data["guilds"].pop(str(gid), None)
+        self._save()
+
     def guild_ids(self) -> list[int]:
         return [int(g) for g in self.data["guilds"]]
 
