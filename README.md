@@ -14,6 +14,16 @@ cp .env.example .env   # then fill it in (see below)
 .venv/bin/python bot.py
 ```
 
+### With Docker
+
+```sh
+cp .env.example .env   # fill in DISCORD_TOKEN
+docker compose up -d --build
+docker compose logs -f
+```
+
+`data.json` lives in the `bot-data` volume (it survives rebuilds). To back it up: `docker compose cp bot:/data/data.json .`. Only `DISCORD_TOKEN` is required in `.env`; `DATA_FILE` is already set by the image.
+
 ### Creating the Discord bot
 
 1. https://discord.com/developers/applications → **New Application** (the account's email address must be verified).

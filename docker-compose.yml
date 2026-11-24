@@ -1,0 +1,10 @@
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env          # DISCORD_TOKEN, GUILD_ID, ADMIN_ROLE (voir .env.example)
+    volumes:
+      - bot-data:/data      # data.json (config, liens, suivi des hints) : survit aux rebuilds
+
+volumes:
+  bot-data:
