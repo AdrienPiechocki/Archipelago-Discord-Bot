@@ -90,4 +90,5 @@ Limitations: the port may change after a restart (rerun `/apserver` if needed); 
 - Only players who ran `/link` are mentioned and detected; others appear by their slot name. A hint where neither the receiver nor the owner is linked is not seen.
 - Hints posted before message tracking was added cannot be struck through automatically.
 - `data.json` contains passwords in plain text (permissions 600): do not commit it.
+- Tests: `pip install -r requirements-dev.txt && python -m pytest`.
 - Dependencies: `discord.py`, `websockets`, `python-dotenv`, `regex` (timeout against slow regexes).
