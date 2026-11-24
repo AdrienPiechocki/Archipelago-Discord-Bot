@@ -52,6 +52,7 @@ Restricted to the `@ArchipelagoAdmin` role.
 | `/link slot [password]` | Links a slot (checks that it can be reached). |
 | `/unlink [slot]` | Removes a slot (the active one by default). |
 | `/slot [slot]` | With no argument: lists your slots (⭐ = active). With one: switches the active slot. |
+| `/status` | Shows the server configuration and the connection state of every linked slot (private reply, no passwords). |
 | `/hint [item] [slot]` | Requests a hint. With no item: shows your hint points. |
 | `/hint_location location [slot]` | Hint for a location in your world. |
 | `/items [filter] [filter_regex] [slot]` | Lists the game's items in columns. `filter`: contained text; `filter_regex`: regular expression (case-insensitive, e.g. `^Progressive\|Key$`). |

@@ -502,6 +502,46 @@ async def slot_cmd(interaction: discord.Interaction, slot: str | None = None):
     await interaction.response.send_message(f"Slot actif : **{slot}**.", ephemeral=True)
 
 
+def conn_state(conn: SlotConnection | None) -> str:
+    """État lisible d'une connexion de slot."""
+    if conn is None:
+        return "⚪ non démarrée"
+    if conn.connected.is_set():
+        return "🟢 connecté"
+    if conn.error:
+        return f"🔴 {conn.error}"
+    return "🟡 connexion en cours" if conn.alive else "🔴 abandonnée"
+
+
+def format_status(cfg: dict, rows: list[tuple[str, str, str]]) -> str:
+    """cfg : config de la guilde ; rows : [(slot, nom du joueur Discord, état), ...]. Aucun mot de passe affiché."""
+    def chan(cid):
+        return f"<#{cid}>" if cid else "—"
+    log_channel = cfg.get("log_channel")
+    lines = ["**Configuration**",
+             f"Serveur : `{cfg['host']}`" if cfg.get("host") else "Serveur : non configuré (`/apserver`)",
+             f"Salon des commandes : {chan(cfg.get('channel'))}",
+             f"Forum des hints : {chan(cfg.get('forum'))}",
+             f"Logs : {chan(log_channel)}" + (f" (items : {cfg.get('log_items', 'important')})" if log_channel else ""),
+             f"Room : {cfg['room_url']}" if cfg.get("room_url") else "Room : relance auto désactivée",
+             "", f"**Slots liés ({len(rows)})**"]
+    lines += [f"{state} — **{slot}** ({user})" for slot, user, state in sorted(rows)] or ["Aucun slot lié (`/link`)."]
+    return "\n".join(lines)
+
+
+@bot.tree.command(name="status", description="Affiche la configuration du bot et l'état des connexions")
+@app_commands.guild_only()
+async def status(interaction: discord.Interaction):
+    gid = interaction.guild_id
+    rows = []
+    for uid, entry in store.entries(gid):
+        member = interaction.guild.get_member(uid)
+        rows.append((entry["slot"], member.display_name if member else str(uid),
+                     conn_state(bot.ap.get(gid, entry["slot"]))))
+    await interaction.response.send_message(format_status(store.guild(gid), rows)[:2000], ephemeral=True,
+                                            allowed_mentions=NO_MENTIONS)
+
+
 # --- console Archipelago --------------------------------------------------------------------
 
 async def run_console(out: Out, command: str, slot: str | None = None):
